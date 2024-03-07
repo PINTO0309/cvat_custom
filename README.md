@@ -12,7 +12,7 @@ see:
 - https://github.com/PINTO0309/cvat_custom/blob/f8935a48e0a20396558d7381169235bd79cf3d7b/cvat/settings/production.py#L15-L17
 - https://github.com/PINTO0309/cvat_custom/blob/f8935a48e0a20396558d7381169235bd79cf3d7b/cvat/settings/testing_rest.py#L24-L26
 
-## Usage
+## 1. Usage
 ```bash
 git clone https://github.com/PINTO0309/cvat_custom.git
 cd cvat_custom
@@ -26,14 +26,14 @@ docker compose up -d
 ```
 Access http://localhost:8080 from your browser.
 
-## How to reproduce the problem
+## 2. How to reproduce the problem
 
-```
+```bash
 git clone https://github.com/opencv/cvat.git
 docker compose up -d
-
-
 ```
+Access http://localhost:8080 from your browser.
+
 
 ---
 
