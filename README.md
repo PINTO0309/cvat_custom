@@ -23,6 +23,8 @@ docker compose \
 build
 
 docker compose up -d
+
+docker exec -it cvat_server bash -ic 'python3 ~/manage.py createsuperuser'
 ```
 Access http://localhost:8080 from your browser.
 
