@@ -34,6 +34,19 @@ docker compose up -d
 ```
 Access http://localhost:8080 from your browser.
 
+Wait 30 seconds for error to occur.
+
+![image](https://github.com/PINTO0309/cvat_custom/assets/33194443/f376f7d8-0f94-46b0-af33-4e00db21c18e)
+
+Totally useless error messages are displayed. This error message does not explain anything about the nature of the error. The real cause of the error is that the WEB server fails to start if the storage space is less than 10% free in the django health check.
+
+```
+Cannot connect to the server
+Make sure the CVAT backend and all necessary services (Database, Redis and Open Policy Agent) are running and available.
+If you upgraded from version 2.2.0 or earlier, manual actions may be needed, see the Upgrade Guide.
+```
+
+![image](https://github.com/PINTO0309/cvat_custom/assets/33194443/f67dc901-5ecc-453d-ba90-3eb4f109f4b0)
 
 ---
 
