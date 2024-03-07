@@ -2,6 +2,41 @@
 
 # Computer Vision Annotation Tool (CVAT)
 
+---
+
+**This Fork (branch: `storage_limit_removal`) disables the health check to see if there is more than 10% free storage space. The CVAT standard docker container cannot start the web server properly if there is no more than 10% of the total storage space available due to django's health check function.**
+
+see:
+
+- [CVAT fails health check using >90% disk #5449](https://github.com/opencv/cvat/issues/5449)
+- https://github.com/PINTO0309/cvat_custom/blob/f8935a48e0a20396558d7381169235bd79cf3d7b/cvat/settings/production.py#L15-L17
+- https://github.com/PINTO0309/cvat_custom/blob/f8935a48e0a20396558d7381169235bd79cf3d7b/cvat/settings/testing_rest.py#L24-L26
+
+## Usage
+```bash
+git clone https://github.com/PINTO0309/cvat_custom.git
+cd cvat_custom
+
+docker compose \
+-f docker-compose.yml \
+-f docker-compose.dev.yml \
+build
+
+docker compose up -d
+```
+Access http://localhost:8080 from your browser.
+
+## How to reproduce the problem
+
+```
+git clone https://github.com/opencv/cvat.git
+docker compose up -d
+
+
+```
+
+---
+
 [![CI][ci-img]][ci-url]
 [![Gitter chat][gitter-img]][gitter-url]
 [![Discord][discord-img]][discord-url]
