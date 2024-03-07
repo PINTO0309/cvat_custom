@@ -12,3 +12,6 @@ NUCLIO['HOST'] = os.getenv('CVAT_NUCLIO_HOST', 'nuclio')
 # https://github.com/moggers87/django-sendfile2
 SENDFILE_BACKEND = 'django_sendfile.backends.nginx'
 SENDFILE_URL = '/'
+HEALTH_CHECK = {
+    'DISK_USAGE_MAX': None,
+}
